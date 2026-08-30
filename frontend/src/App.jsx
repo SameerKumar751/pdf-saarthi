@@ -9,7 +9,7 @@ import Features from './components/Features';
 import About from './components/About';
 import Footer from './components/Footer';
 
-const API_BASE = 'http://localhost:5001/api';
+const API_BASE = 'https://pdf-saarthi-backend.onrender.com/api';
 
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);

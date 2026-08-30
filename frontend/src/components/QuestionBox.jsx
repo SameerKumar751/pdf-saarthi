@@ -16,13 +16,18 @@ function QuestionBox({
       </p>
 
       <div className="question-row">
-        <input
+       <input
           type="text"
           placeholder="What is this PDF about?"
           value={question}
           onChange={onQuestionChange}
-          disabled={!isPdfUploaded || isLoading}
-        />
+          onKeyDown={(e) => {
+          if (e.key === 'Enter' && !isLoading && question.trim()) {
+        onAsk();
+      }
+  }}
+  disabled={!isPdfUploaded || isLoading}
+/>
 
         <button
           type="button"
